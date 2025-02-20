@@ -61,7 +61,7 @@ const Home = () => {
           <div className="w-1/2 pl-20 py-20">
             <div className="text-red-600 w-12 h-12 mb-8">✕</div>
             <h1 className="text-6xl font-bold text-white mb-6">
-              WE'RE THE
+              WE&apos;RE THE
               <br />
               LAST OF
               <br />
@@ -211,7 +211,7 @@ const Home = () => {
                     <span key={i}>★</span>
                   ))}
                 </div>
-                <p className="mb-8 text-gray-700">"{testimonial.text}"</p>
+                <p className="mb-8 text-gray-700">{testimonial.text}</p>
                 <div className="flex items-center gap-4">
                   <div className="bg-gray-200 w-12 h-12 rounded-full"></div>
                   <p className="font-medium">{testimonial.name}</p>
