@@ -1,6 +1,38 @@
-import { useState } from 'react';
+import { useState } from "react";
 import logo from "../../assets/img/logo/logo.png";
 
+const navbarcom = [
+  {
+    id: 1,
+    title: "HOME",
+    href: "#",
+  },
+  {
+    id: 2,
+    title: "ABOUT",
+    href: "/about",
+  },
+  {
+    id: 3,
+    title: "SERVICE",
+    href: "#",
+  },
+  {
+    id: 4,
+    title: "GALLERY",
+    href: "#",
+  },
+  {
+    id: 5,
+    title: "BLOG",
+    href: "#",
+  },
+  {
+    id: 6,
+    title: "CONTACT",
+    href: "#",
+  },
+];
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,24 +49,39 @@ export default function Navbar() {
           className="md:hidden p-2 text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-grow justify-center space-x-8">
-          {["HOME", "ABOUT", "SERVICE", "GALLERY", "BLOG", "CONTACT"].map((item) => (
+          {navbarcom.map((item, id) => (
             <a
-              key={item}
-              href="#"
+              key={id}
+              href={item.href}
               className="text-amber-50 hover:text-red-600 transition-colors"
             >
-              {item}
+              {item.title}
             </a>
           ))}
         </div>
@@ -49,14 +96,14 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="absolute top-16 left-0 right-0 bg-[#1f0101] z-50 md:hidden">
           <div className="flex flex-col items-center space-y-4 py-4">
-            {["HOME", "ABOUT", "SERVICE", "GALLERY", "BLOG", "CONTACT"].map((item) => (
+            {navbarcom.map((item, id) => (
               <a
-                key={item}
-                href="#"
+                key={id}
+                href={item.href}
                 className="text-amber-50 hover:text-red-600 transition-colors w-full text-center py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
+                {item.title}
               </a>
             ))}
             <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 w-full max-w-xs transition-colors">
