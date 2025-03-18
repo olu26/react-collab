@@ -1,9 +1,12 @@
-"use client"
-
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Search, User, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+// import {
+//   Search,
+//   User,
+//   MessageSquare,
+//   ChevronLeft,
+//   ChevronRight,
+// } from "lucide-react";
 
 export default function Blog() {
   // Sample blog posts data
@@ -58,7 +61,7 @@ export default function Blog() {
       categories: ["Travel", "Lifestyle"],
       comments: 3,
     },
-  ]
+  ];
 
   // Sample categories data
   const categories = [
@@ -68,7 +71,7 @@ export default function Blog() {
     { name: "Product", count: 11 },
     { name: "Inspiration", count: 21 },
     { name: "Health Care", count: 9 },
-  ]
+  ];
 
   // Sample recent posts data
   const recentPosts = [
@@ -78,13 +81,37 @@ export default function Blog() {
       title: "From life was you fish...",
       date: "January 12, 2019",
     },
-    { id: 2, image: "/placeholder.svg?height=80&width=80", title: "The Amazing Hubble", date: "02 Hours ago" },
-    { id: 3, image: "/placeholder.svg?height=80&width=80", title: "Astronomy Or Astrology", date: "03 Hours ago" },
-    { id: 4, image: "/placeholder.svg?height=80&width=80", title: "Asteroids telescope", date: "01 Hours ago" },
-  ]
+    {
+      id: 2,
+      image: "/placeholder.svg?height=80&width=80",
+      title: "The Amazing Hubble",
+      date: "02 Hours ago",
+    },
+    {
+      id: 3,
+      image: "/placeholder.svg?height=80&width=80",
+      title: "Astronomy Or Astrology",
+      date: "03 Hours ago",
+    },
+    {
+      id: 4,
+      image: "/placeholder.svg?height=80&width=80",
+      title: "Asteroids telescope",
+      date: "01 Hours ago",
+    },
+  ];
 
   // Sample tags data
-  const tags = ["project", "love", "technology", "travel", "restaurant", "life style", "design", "illustration"]
+  const tags = [
+    "project",
+    "love",
+    "technology",
+    "travel",
+    "restaurant",
+    "life style",
+    "design",
+    "illustration",
+  ];
 
   // Sample Instagram feeds data
   const instagramFeeds = [
@@ -94,10 +121,10 @@ export default function Blog() {
     { id: 4, image: "/placeholder.svg?height=100&width=100" },
     { id: 5, image: "/placeholder.svg?height=100&width=100" },
     { id: 6, image: "/placeholder.svg?height=100&width=100" },
-  ]
+  ];
 
   // State for search input
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <main className="font-sans">
@@ -107,7 +134,7 @@ export default function Blog() {
           <h2 className="text-5xl font-bold text-white animate-fadeIn">Blog</h2>
         </div>
         <div className="absolute inset-0 overflow-hidden">
-          <Image
+          <img
             src="/placeholder.svg?height=600&width=1200"
             alt="Hero background"
             width={1200}
@@ -125,9 +152,12 @@ export default function Blog() {
             <div className="lg:w-2/3">
               {/* Blog Posts */}
               {blogPosts.map((post) => (
-                <article key={post.id} className="mb-12 bg-white rounded-lg shadow-md overflow-hidden">
+                <article
+                  key={post.id}
+                  className="mb-12 bg-white rounded-lg shadow-md overflow-hidden"
+                >
                   <div className="relative">
-                    <Image
+                    <img
                       src={post.image || "/placeholder.svg"}
                       alt={post.title}
                       width={800}
@@ -225,7 +255,9 @@ export default function Blog() {
 
                 {/* Categories Widget */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold mb-4 text-gray-800">Category</h4>
+                  <h4 className="text-xl font-bold mb-4 text-gray-800">
+                    Category
+                  </h4>
                   <ul className="space-y-3">
                     {categories.map((category, index) => (
                       <li key={index}>
@@ -243,11 +275,13 @@ export default function Blog() {
 
                 {/* Recent Posts Widget */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">Recent Post</h3>
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">
+                    Recent Post
+                  </h3>
                   <div className="space-y-4">
                     {recentPosts.map((post) => (
                       <div key={post.id} className="flex gap-4">
-                        <Image
+                        <img
                           src={post.image || "/placeholder.svg"}
                           alt={post.title}
                           width={80}
@@ -255,7 +289,10 @@ export default function Blog() {
                           className="w-20 h-20 object-cover rounded"
                         />
                         <div>
-                          <Link href="/blog-details" className="font-medium text-gray-800 hover:text-primary">
+                          <Link
+                            href="/blog-details"
+                            className="font-medium text-gray-800 hover:text-primary"
+                          >
                             <h3>{post.title}</h3>
                           </Link>
                           <p className="text-sm text-gray-500">{post.date}</p>
@@ -267,7 +304,9 @@ export default function Blog() {
 
                 {/* Tags Widget */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold mb-4 text-gray-800">Tag Clouds</h4>
+                  <h4 className="text-xl font-bold mb-4 text-gray-800">
+                    Tag Clouds
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag, index) => (
                       <Link
@@ -283,7 +322,9 @@ export default function Blog() {
 
                 {/* Instagram Widget */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold mb-4 text-gray-800">Instagram Feeds</h4>
+                  <h4 className="text-xl font-bold mb-4 text-gray-800">
+                    Instagram Feeds
+                  </h4>
                   <div className="grid grid-cols-3 gap-2">
                     {instagramFeeds.map((feed) => (
                       <Link
@@ -291,7 +332,7 @@ export default function Blog() {
                         href="#"
                         className="block overflow-hidden rounded-md hover:opacity-80 transition-opacity"
                       >
-                        <Image
+                        <img
                           src={feed.image || "/placeholder.svg"}
                           alt="Instagram feed"
                           width={100}
@@ -305,7 +346,9 @@ export default function Blog() {
 
                 {/* Newsletter Widget */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold mb-4 text-gray-800">Newsletter</h4>
+                  <h4 className="text-xl font-bold mb-4 text-gray-800">
+                    Newsletter
+                  </h4>
                   <form>
                     <div className="mb-3">
                       <input
@@ -343,11 +386,15 @@ export default function Blog() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
           </svg>
         </button>
       </div>
     </main>
-  )
+  );
 }
-

@@ -1,8 +1,8 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa6";
-import  footerlogo from "../../assets/img/logo/logo2_footer.png";
+import footerlogo from "../../assets/img/logo/logo2_footer.png";
 
-import {  FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 // import footerlogo from "../../assets/img/logo/logo2_footer.png";
 const Footer = () => {
   return (
@@ -67,11 +67,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-gray-400 text-sm border-t border-gray-800 pt-8">
-          <p className="">
-            Copyright ©2025 All rights reserved | This template is made with ❤️
-            
-            by Colorlib
-          </p>
+          <p className="">Copyright ©2025 All rights reserved</p>
         </div>
       </div>
     </footer>
@@ -79,4 +75,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import logo from "../../assets/img/logo/logo.png";
+import { Link } from "react-router-dom";
 
 const navbarcom = [
   {
     id: 1,
     title: "HOME",
-    href: "#",
+    href: "/",
   },
   {
     id: 2,
@@ -15,22 +16,22 @@ const navbarcom = [
   {
     id: 3,
     title: "SERVICE",
-    href: "#",
+    href: "/services",
   },
   {
     id: 4,
     title: "GALLERY",
-    href: "#",
+    href: "/gallery",
   },
   {
     id: 5,
     title: "BLOG",
-    href: "#",
+    href: "/blog",
   },
   {
     id: 6,
     title: "CONTACT",
-    href: "#",
+    href: "/contact",
   },
 ];
 export default function Navbar() {
@@ -38,11 +39,11 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#1f0101] shadow-sm relative">
-      <div className="w-full flex items-center justify-between h-16 px-4">
+      <div className="w-full flex items-center justify-between h-16 pl-4">
         {/* Brand Logo */}
-        <div className="flex-shrink-0">
+        <Link to={"/"} className="flex-shrink-0">
           <img src={logo} alt="Narosundar" className="h-10" />
-        </div>
+        </Link>
 
         {/* Hamburger Menu (Mobile) */}
         <button
@@ -74,22 +75,24 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-grow justify-center space-x-8">
-          {navbarcom.map((item, id) => (
-            <a
-              key={id}
-              href={item.href}
-              className="text-amber-50 hover:text-red-600 transition-colors"
-            >
-              {item.title}
-            </a>
-          ))}
-        </div>
+        <div className="flex gap-10 items-center h-full">
+          <div className="hidden md:flex flex-grow justify-center space-x-8">
+            {navbarcom.map((item, id) => (
+              <a
+                key={id}
+                href={item.href}
+                className="text-amber-50 text-lg font-semibold hover:text-red-600 transition-colors"
+              >
+                {item.title}
+              </a>
+            ))}
+          </div>
 
-        {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-red-600 hover:bg-red-700 text-white px-6 py-2 transition-colors">
-          FREE QUOTE
-        </button>
+          {/* Desktop CTA Button */}
+          <button className="hidden md:block bg-red-600 hover:bg-red-700 text-white px-6 py-2 transition-colors h-full">
+            FREE QUOTE
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

@@ -1,26 +1,25 @@
-"use client"
-
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ChevronUp, ChevronDown, Star } from "lucide-react"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+// import { ChevronUp, ChevronDown, Star } from "lucide-react";
 
 export default function Service() {
-  const [activeAccordion, setActiveAccordion] = useState("collapseOne")
+  const [activeAccordion, setActiveAccordion] = useState("collapseOne");
 
   const toggleAccordion = (id) => {
-    setActiveAccordion(activeAccordion === id ? "" : id)
-  }
+    setActiveAccordion(activeAccordion === id ? "" : id);
+  };
 
   return (
     <main className="font-sans">
       {/* Hero Section */}
       <div className="relative bg-gray-900 h-96 flex items-center justify-center">
         <div className="text-center z-10">
-          <h2 className="text-5xl font-bold text-white animate-fadeIn">Services</h2>
+          <h2 className="text-5xl font-bold text-white animate-fadeIn">
+            Services
+          </h2>
         </div>
         <div className="absolute inset-0 overflow-hidden">
-          <Image
+          <img
             src="/placeholder.svg?height=600&width=1200"
             alt="Hero background"
             width={1200}
@@ -61,11 +60,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Trim your Hair</h4>
+                            <h4 className="text-lg font-medium">
+                              Trim your Hair
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -75,11 +77,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Special Beard Treatment</h4>
+                            <h4 className="text-lg font-medium">
+                              Special Beard Treatment
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -89,11 +94,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Color your Beard</h4>
+                            <h4 className="text-lg font-medium">
+                              Color your Beard
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -103,11 +111,14 @@ export default function Service() {
                       <div className="py-3">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Wax your Beard</h4>
+                            <h4 className="text-lg font-medium">
+                              Wax your Beard
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -136,11 +147,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Trim your Hair</h4>
+                            <h4 className="text-lg font-medium">
+                              Trim your Hair
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -150,11 +164,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Special Beard Treatment</h4>
+                            <h4 className="text-lg font-medium">
+                              Special Beard Treatment
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -164,11 +181,14 @@ export default function Service() {
                       <div className="py-3 border-b">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Color your Beard</h4>
+                            <h4 className="text-lg font-medium">
+                              Color your Beard
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -178,11 +198,14 @@ export default function Service() {
                       <div className="py-3">
                         <div className="flex justify-between items-center">
                           <div>
-                            <h4 className="text-lg font-medium">Wax your Beard</h4>
+                            <h4 className="text-lg font-medium">
+                              Wax your Beard
+                            </h4>
                           </div>
                           <div className="text-right">
                             <p>
-                              From <span className="font-bold text-lg">$40</span>
+                              From{" "}
+                              <span className="font-bold text-lg">$40</span>
                             </p>
                           </div>
                         </div>
@@ -193,10 +216,10 @@ export default function Service() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right img */}
             <div className="lg:w-5/12">
               <div className="rounded-lg overflow-hidden shadow-xl">
-                <Image
+                <img
                   src="/placeholder.svg?height=600&width=500"
                   alt="Barber services"
                   width={500}
@@ -217,7 +240,12 @@ export default function Service() {
             <div className="bg-white rounded-lg p-8 text-center transition-transform hover:scale-105">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
-                  <Image src="/placeholder.svg?height=50&width=50" alt="Stylish hair cut" width={50} height={50} />
+                  <img
+                    src="/placeholder.svg?height=50&width=50"
+                    alt="Stylish hair cut"
+                    width={50}
+                    height={50}
+                  />
                 </div>
               </div>
               <h5 className="text-xl font-bold mb-4">
@@ -227,7 +255,8 @@ export default function Service() {
               </h5>
               <div>
                 <p className="text-gray-600">
-                  Available be the majority have suffered alteration in some form, by injected humour.
+                  Available be the majority have suffered alteration in some
+                  form, by injected humour.
                 </p>
               </div>
             </div>
@@ -236,7 +265,12 @@ export default function Service() {
             <div className="bg-white rounded-lg p-8 text-center transition-transform hover:scale-105">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
-                  <Image src="/placeholder.svg?height=50&width=50" alt="Cut & hair style" width={50} height={50} />
+                  <img
+                    src="/placeholder.svg?height=50&width=50"
+                    alt="Cut & hair style"
+                    width={50}
+                    height={50}
+                  />
                 </div>
               </div>
               <h5 className="text-xl font-bold mb-4">
@@ -246,7 +280,8 @@ export default function Service() {
               </h5>
               <div>
                 <p className="text-gray-600">
-                  Available be the majority have suffered alteration in some form, by injected humour.
+                  Available be the majority have suffered alteration in some
+                  form, by injected humour.
                 </p>
               </div>
             </div>
@@ -255,7 +290,12 @@ export default function Service() {
             <div className="bg-white rounded-lg p-8 text-center transition-transform hover:scale-105">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-full">
-                  <Image src="/placeholder.svg?height=50&width=50" alt="Color & hair wash" width={50} height={50} />
+                  <img
+                    src="/placeholder.svg?height=50&width=50"
+                    alt="Color & hair wash"
+                    width={50}
+                    height={50}
+                  />
                 </div>
               </div>
               <h5 className="text-xl font-bold mb-4">
@@ -265,7 +305,8 @@ export default function Service() {
               </h5>
               <div>
                 <p className="text-gray-600">
-                  Available be the majority have suffered alteration in some form, by injected humour.
+                  Available be the majority have suffered alteration in some
+                  form, by injected humour.
                 </p>
               </div>
             </div>
@@ -286,15 +327,19 @@ export default function Service() {
               <div className="mb-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-500 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Consectetur adipiscing elit, sed do eiusmod tempor dunt ulter labore et dolore magna.
+                  Consectetur adipiscing elit, sed do eiusmod tempor dunt ulter
+                  labore et dolore magna.
                 </p>
               </div>
               <div className="flex items-center">
-                <Image
+                <img
                   src="/placeholder.svg?height=60&width=60"
                   alt="Customer"
                   width={60}
@@ -310,15 +355,19 @@ export default function Service() {
               <div className="mb-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-500 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6">
-                  Consectetur adipiscing elit, sed do eiusmod tempor dunt ulter labore et dolore magna.
+                  Consectetur adipiscing elit, sed do eiusmod tempor dunt ulter
+                  labore et dolore magna.
                 </p>
               </div>
               <div className="flex items-center">
-                <Image
+                <img
                   src="/placeholder.svg?height=60&width=60"
                   alt="Customer"
                   width={60}
@@ -334,15 +383,19 @@ export default function Service() {
               <div className="mb-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-500 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6">
-                  onsectetur adipiscing elit, sed do eiusmod tempor dunt ulter labore et dolore magna.
+                  onsectetur adipiscing elit, sed do eiusmod tempor dunt ulter
+                  labore et dolore magna.
                 </p>
               </div>
               <div className="flex items-center">
-                <Image
+                <img
                   src="/placeholder.svg?height=60&width=60"
                   alt="Customer"
                   width={60}
@@ -370,13 +423,15 @@ export default function Service() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
           </svg>
         </button>
       </div>
     </main>
   );
-};
-
-
-
+}

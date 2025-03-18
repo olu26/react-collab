@@ -1,25 +1,49 @@
-import Image from "next/image"
-
 export default function Gallery() {
   // Sample gallery images - replace with your actual images
   const galleryImages = [
-    { id: 1, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 1" },
-    { id: 2, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 2" },
-    { id: 3, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 3" },
-    { id: 4, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 4" },
-    { id: 5, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 5" },
-    { id: 6, src: "/placeholder.svg?height=600&width=500", alt: "Barber gallery image 6" },
-  ]
+    {
+      id: 1,
+      src: "/assets/img/gallery/barber1.jpg",
+      alt: "Barber gallery image 1",
+    },
+    {
+      id: 2,
+      src: "/placeholder.svg?height=600&width=500",
+      alt: "Barber gallery image 2",
+    },
+    {
+      id: 3,
+      src: "/placeholder.svg?height=600&width=500",
+      alt: "Barber gallery image 3",
+    },
+    {
+      id: 4,
+      src: "/placeholder.svg?height=600&width=500",
+      alt: "Barber gallery image 4",
+    },
+    {
+      id: 5,
+      src: "/placeholder.svg?height=600&width=500",
+      alt: "Barber gallery image 5",
+    },
+    {
+      id: 6,
+      src: "/placeholder.svg?height=600&width=500",
+      alt: "Barber gallery image 6",
+    },
+  ];
 
   return (
     <main className="font-sans">
       {/* Hero Section */}
       <div className="relative bg-gray-900 h-96 flex items-center justify-center">
         <div className="text-center z-10">
-          <h2 className="text-5xl font-bold text-white animate-fadeIn">Gallery</h2>
+          <h2 className="text-5xl font-bold text-white animate-fadeIn">
+            Gallery
+          </h2>
         </div>
         <div className="absolute inset-0 overflow-hidden">
-          <Image
+          <img
             src="/placeholder.svg?height=600&width=1200"
             alt="Hero background"
             width={1200}
@@ -42,7 +66,7 @@ export default function Gallery() {
                 key={image.id}
                 className="overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl hover:scale-105"
               >
-                <Image
+                <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
                   width={500}
@@ -69,11 +93,15 @@ export default function Gallery() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
           </svg>
         </button>
       </div>
     </main>
-  )
+  );
 }
-
